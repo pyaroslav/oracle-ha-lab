@@ -119,6 +119,6 @@ A successful `./run.sh all` ends like this (trimmed):
 
 ## Licensing note
 
-This lab pulls the community `gvenzl/oracle-free` image, which packages **Oracle Database 23ai Free**
+This lab pulls the community `gvenzl/oracle-free` image, which packages **Oracle Database Free** (currently 26ai)
 under Oracle's Free license for development use. It does not redistribute any Oracle software — Docker
 pulls it for you. Review Oracle's license terms for your use.
