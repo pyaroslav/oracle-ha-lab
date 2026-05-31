@@ -25,6 +25,9 @@ cd lab
 
 See [`lab/README.md`](lab/README.md) for the full guide, expected output, and troubleshooting.
 
+**No local Docker, or not enough RAM?** You can run the whole lab **free** on an OCI Always Free cloud
+VM — see [`lab/CLOUD.md`](lab/CLOUD.md).
+
 ## Why only these drills (and not RAC / Data Guard) on the Free image?
 
 - **RAC** needs shared storage and a cluster interconnect — not something you can meaningfully run on a
