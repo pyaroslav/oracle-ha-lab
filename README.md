@@ -1,5 +1,9 @@
 # Oracle HA Lab
 
+> ⚠️ **Moved.** This lab now lives in the **[oracle-labs](https://github.com/pyaroslav/oracle-labs)**
+> monorepo under [`ha/`](https://github.com/pyaroslav/oracle-labs/tree/main/ha) (alongside an AWR lab).
+> This repository is archived and read-only — please use oracle-labs.
+
 A small, runnable lab to *feel* the concepts from the article
 **"The Oracle HA Decision Tree: RAC vs Data Guard vs Both"** on your own machine — no Oracle account
 required. It runs the community **Oracle Database Free** image and drives every command inside the
