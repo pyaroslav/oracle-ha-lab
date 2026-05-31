@@ -4,10 +4,13 @@ This module stands up a genuine **primary + physical standby** so you can run th
 **failover**, and **monitoring** drills from the post against real Data Guard. It needs Enterprise
 Edition, which means an Oracle account.
 
-> ⚠️ **Not auto-tested in the zero-login lab.** Because it requires an Oracle account and ~8–10 GB of
-> Docker memory, this is a **guided** walkthrough rather than a one-command `./run.sh all`. Follow the
-> steps below and adapt paths to your environment. The companion Free lab in [`../lab/`](../lab/) is the
-> one that runs with zero setup.
+> ⚠️ **These commands have NOT been executed or verified.** Data Guard requires Oracle Enterprise
+> Edition (an Oracle account + license), which this project's automated testing does not cover. Treat
+> this as a **guided walkthrough** assembled from standard Data Guard procedure: read it, adapt the
+> hostnames/paths to your environment, and **verify each step in your own lab before relying on it.**
+>
+> By contrast, the zero-login Free lab in [`../lab/`](../lab/) **is** fully tested and CI-verified — it
+> runs with a single `./run.sh all`.
 
 ## 0. Prerequisites
 
