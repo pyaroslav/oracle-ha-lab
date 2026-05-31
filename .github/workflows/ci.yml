@@ -1,0 +1,33 @@
+name: lab-e2e
+
+# Runs the zero-login lab end to end (setup + all three drills) on every push/PR.
+# Oracle DB init is heavy, so timeouts are generous.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  drills:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Environment
+        run: |
+          docker version
+          docker compose version
+          echo "RAM:"; free -h | head -2
+          echo "Disk:"; df -h / | tail -1
+
+      - name: Start Oracle Free and run all drills
+        working-directory: lab
+        run: |
+          chmod +x run.sh
+          ./run.sh up
+          ./run.sh all
+
+      - name: Database log (on failure)
+        if: failure()
+        run: docker logs ora-ha-lab 2>&1 | tail -120
